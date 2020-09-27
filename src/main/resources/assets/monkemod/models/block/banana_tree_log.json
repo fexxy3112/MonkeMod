@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "monkemod:blocks/banana_tree_log_top",
+    "side": "monkemod:blocks/banana_tree_log"
+  }
+}
