@@ -1,0 +1,6 @@
+{
+  "parent": "monkemod:block/leaves",
+  "textures": {
+    "all": "monkemod:block/banana_tree_leaves"
+  }
+}
