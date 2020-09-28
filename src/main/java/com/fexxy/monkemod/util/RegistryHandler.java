@@ -27,6 +27,7 @@ public class RegistryHandler {
     //Items
     public static final RegistryObject<Item> BANANA = ITEMS.register("banana", ItemBase::new);
 
+
     //Blocks
     public static final RegistryObject<Block> BANANA_TREE_LOG = BLOCKS.register("banana_tree_log", BananaTreeLog::new);
     public static final RegistryObject<Block> BANANA_TREE_LEAVES = BLOCKS.register("banana_tree_leaves", BananaTreeLog::new);
