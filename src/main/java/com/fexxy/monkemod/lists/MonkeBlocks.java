@@ -11,5 +11,6 @@ public class MonkeBlocks {
 
     public static Block BANANA_TREE_LOG;
     public static Block BANANA_TREE_LEAVES;
+    public static Block BANANA_TREE_PLANKS;
 }
 
