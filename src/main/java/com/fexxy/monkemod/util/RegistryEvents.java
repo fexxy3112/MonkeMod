@@ -2,6 +2,7 @@ package com.fexxy.monkemod.util;
 
 import com.fexxy.monkemod.MonkeMod;
 import com.fexxy.monkemod.blocks.BlockBase;
+import com.fexxy.monkemod.items.ItemBase;
 import com.fexxy.monkemod.lists.MonkeBlocks;
 import com.fexxy.monkemod.lists.MonkeItems;
 import net.minecraft.block.Block;
@@ -26,8 +27,8 @@ public class RegistryEvents {
         }
 
         Item[] items = new Item[]{
-                MonkeItems.BANANA = new Item(new Item.Properties().food(Foods.APPLE).group(ItemGroup.FOOD)).setRegistryName(location("banana")),
-                MonkeItems.GOLDEN_BANANA = new Item(new Item.Properties().food(Foods.GOLDEN_APPLE).group(ItemGroup.FOOD)).setRegistryName(location("golden_banana"))
+                MonkeItems.BANANA = new Item(new Item.Properties().food(Foods.APPLE).group(MonkeMod.TAB)).setRegistryName(location("banana")),
+                MonkeItems.GOLDEN_BANANA = new Item(new Item.Properties().food(Foods.GOLDEN_APPLE).group(MonkeMod.TAB)).setRegistryName(location("golden_banana"))
         };
 
         event.getRegistry().registerAll(items);
@@ -37,7 +38,8 @@ public class RegistryEvents {
     public static void registerBlocks(final RegistryEvent.Register<Block> event) {
         MonkeMod.LOGGER.info("Registering blocks");
         Block[] blocks = new Block[]{
-                MonkeBlocks.BANANA_TREE_LEAVES = new BlockBase(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f,0.2f).sound(SoundType.PLANT), new Item.Properties().group(ItemGroup.DECORATIONS), "banana_tree_leaves"),
+                MonkeBlocks.BANANA_TREE_LOG = new BlockBase(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0f,2.0f).sound(SoundType.WOOD), new Item.Properties().group(MonkeMod.TAB), "banana_tree_log"),
+                MonkeBlocks.BANANA_TREE_LEAVES = new BlockBase(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f,0.2f).sound(SoundType.PLANT), new Item.Properties().group(MonkeMod.TAB), "banana_tree_leaves"),
         };
 
         event.getRegistry().registerAll(blocks);

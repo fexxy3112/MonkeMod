@@ -9,7 +9,7 @@ import net.minecraft.item.ItemGroup;
 public class BlockItemBase extends BlockItem {
 
     public BlockItemBase(Block block) {
-        super(block, new Item.Properties().group(ItemGroup.BREWING));
+        super(block, new Item.Properties().group(MonkeMod.TAB));
     }
 }
 

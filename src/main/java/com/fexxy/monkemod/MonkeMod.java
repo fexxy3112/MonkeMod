@@ -36,10 +36,10 @@ public class MonkeMod
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
-   /*public static final ItemGroup TAB = new ItemGroup("monkemodTab") {
+   public static final ItemGroup TAB = new ItemGroup("monkemodTab") {
         @Override
         public ItemStack createIcon() {
-            return new ItemStack(MonkeItems.BANANA);
+            return new ItemStack(MonkeItems.GOLDEN_BANANA);
         }
-    };*/
+    };
 }
