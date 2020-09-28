@@ -1,7 +1,7 @@
 {
   "variants": {
-    "axis=y":    { "model": "block/banana_tree_log" },
-    "axis=z":     { "model": "block/banana_tree_log", "x": 90 },
-    "axis=x":     { "model": "block/banana_tree_log", "x": 90, "y": 90 }
+    "axis=y":    { "model": "monkemod:block/banana_tree_log" },
+    "axis=z":     { "model": "monkemod:block/banana_tree_log", "x": 90 },
+    "axis=x":     { "model": "monkemod:block/banana_tree_log", "x": 90, "y": 90 }
   }
 }

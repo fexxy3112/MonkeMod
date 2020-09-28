@@ -41,11 +41,11 @@ public class RegistryEvents {
         Block[] blocks = new Block[]{
                 MonkeBlocks.BANANA_TREE_LOG = new BlockBase(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0f,2.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE), new Item.Properties().group(MonkeMod.TAB), "banana_tree_log"),
                 MonkeBlocks.BANANA_TREE_LEAVES = new BlockBase(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f,0.2f).sound(SoundType.PLANT), new Item.Properties().group(MonkeMod.TAB), "banana_tree_leaves"),
+                MonkeBlocks.BANANA_TREE_PLANKS = new BlockBase(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD), new Item.Properties().group(MonkeMod.TAB), "banana_tree_planks"),
         };
 
         event.getRegistry().registerAll(blocks);
     }
-
     public static ResourceLocation location(String name){
         return new ResourceLocation("monkemod",name);
     }

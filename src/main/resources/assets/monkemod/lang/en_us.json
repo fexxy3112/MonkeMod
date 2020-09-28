@@ -2,6 +2,7 @@
   "item.monkemod.banana": "Banana",
   "item.monkemod.golden_banana": "Golden Banana",
   "block.monkemod.banana_tree_log": "BananaTree Log",
+  "block.monkemod.banana_tree_planks": "BananaTree Planks",
   "block.monkemod.banana_tree_leaves": "BananaTree Leaves",
   "itemGroup.monkemodTab": "MonkeMod"
 }
