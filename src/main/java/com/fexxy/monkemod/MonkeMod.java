@@ -1,7 +1,10 @@
 package com.fexxy.monkemod;
 
+import com.fexxy.monkemod.lists.MonkeBlocks;
 import com.fexxy.monkemod.lists.MonkeItems;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -34,6 +37,8 @@ public class MonkeMod
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+        RenderTypeLookup.setRenderLayer(MonkeBlocks.BANANA_TREE_LEAVES, RenderType.getCutoutMipped());
+
     }
 
    public static final ItemGroup TAB = new ItemGroup("monkemodTab") {

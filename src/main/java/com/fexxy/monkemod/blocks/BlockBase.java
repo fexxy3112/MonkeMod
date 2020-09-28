@@ -2,14 +2,28 @@ package com.fexxy.monkemod.blocks;
 
 import com.fexxy.monkemod.lists.MonkeBlocks;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.storage.loot.LootContext;
 
+import java.util.List;
 import java.util.Properties;
 
 public class BlockBase extends Block {
     public Item item;
+
+    @Override
+    public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+        List<ItemStack> list = super.getDrops(state, builder);
+        if(list.isEmpty()){
+            list.add(new ItemStack(item, 1));
+        }
+
+        return list;
+    }
 
     public BlockBase(Properties properties, Item.Properties builder, String regName) {
         super(properties);
