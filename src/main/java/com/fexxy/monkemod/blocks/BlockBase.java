@@ -11,16 +11,15 @@ import java.util.Properties;
 public class BlockBase extends Block {
     public Item item;
 
-    public BlockBase(Properties properties, Item.Properties builder, ResourceLocation regName) {
+    public BlockBase(Properties properties, Item.Properties builder, String regName) {
         super(properties);
 
-        this.setRegistryName(regName);
-        item = new BlockItem(this,builder).setRegistryName(regName);
+        ResourceLocation location = new ResourceLocation("monkemod",regName);
+
+        this.setRegistryName(location);
+        item = new BlockItem(this,builder).setRegistryName(location);
 
         MonkeBlocks.BLOCKS.add(this);
         MonkeBlocks.ITEMBLOCKS.add(item);
-    }
-
-    private void setRegistryName(ResourceLocation regName) {
     }
 }
