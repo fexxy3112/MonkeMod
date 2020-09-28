@@ -1,6 +1,6 @@
 {
-  "parent": "monkemod:block/cube_all",
+  "parent": "block/leaves",
   "textures": {
-    "all": "monkemod:block/banana_tree_leaves"
+    "all": "monkemod:blocks/banana_tree_leaves"
   }
 }
