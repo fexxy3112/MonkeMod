@@ -13,6 +13,7 @@ import net.minecraft.item.Foods;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -38,7 +39,7 @@ public class RegistryEvents {
     public static void registerBlocks(final RegistryEvent.Register<Block> event) {
         MonkeMod.LOGGER.info("Registering blocks");
         Block[] blocks = new Block[]{
-                MonkeBlocks.BANANA_TREE_LOG = new BlockBase(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0f,2.0f).sound(SoundType.WOOD), new Item.Properties().group(MonkeMod.TAB), "banana_tree_log"),
+                MonkeBlocks.BANANA_TREE_LOG = new BlockBase(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0f,2.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE), new Item.Properties().group(MonkeMod.TAB), "banana_tree_log"),
                 MonkeBlocks.BANANA_TREE_LEAVES = new BlockBase(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f,0.2f).sound(SoundType.PLANT), new Item.Properties().group(MonkeMod.TAB), "banana_tree_leaves"),
         };
 
