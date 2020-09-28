@@ -27,6 +27,7 @@ public class RegistryEvents {
 
         Item[] items = new Item[]{
                 MonkeItems.BANANA = new Item(new Item.Properties().food(Foods.APPLE).group(ItemGroup.FOOD)).setRegistryName(location("banana")),
+                MonkeItems.GOLDEN_BANANA = new Item(new Item.Properties().food(Foods.GOLDEN_APPLE).group(ItemGroup.FOOD)).setRegistryName(location("golden_banana"))
         };
 
         event.getRegistry().registerAll(items);
@@ -36,7 +37,7 @@ public class RegistryEvents {
     public static void registerBlocks(final RegistryEvent.Register<Block> event) {
         MonkeMod.LOGGER.info("Registering blocks");
         Block[] blocks = new Block[]{
-                MonkeBlocks.BANANA_TREE_LEAVES = new BlockBase(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f,0.2f).sound(SoundType.PLANT), new Item.Properties().group(ItemGroup.DECORATIONS), "banana_leaves"),
+                MonkeBlocks.BANANA_TREE_LEAVES = new BlockBase(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f,0.2f).sound(SoundType.PLANT), new Item.Properties().group(ItemGroup.DECORATIONS), "banana_tree_leaves"),
         };
 
         event.getRegistry().registerAll(blocks);
