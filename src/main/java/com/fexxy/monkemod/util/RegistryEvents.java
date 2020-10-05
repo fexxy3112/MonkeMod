@@ -2,14 +2,16 @@ package com.fexxy.monkemod.util;
 
 import com.fexxy.monkemod.MonkeMod;
 import com.fexxy.monkemod.blocks.BlockBase;
-import com.fexxy.monkemod.blocks.LogBase;
+import com.fexxy.monkemod.items.ItemBase;
 import com.fexxy.monkemod.lists.MonkeBlocks;
 import com.fexxy.monkemod.lists.MonkeItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.Food;
 import net.minecraft.item.Foods;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegistryEvent;
@@ -37,9 +39,9 @@ public class RegistryEvents {
     public static void registerBlocks(final RegistryEvent.Register<Block> event) {
         MonkeMod.LOGGER.info("Registering blocks");
         Block[] blocks = new Block[]{
-                MonkeBlocks.BANANA_TREE_LOG = new LogBase(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0f,2.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE), new Item.Properties().group(MonkeMod.TAB), "banana_tree_log"),
-                MonkeBlocks.BANANA_TREE_LEAVES = new BlockBase(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f,0.2f).sound(SoundType.PLANT)),
-                MonkeBlocks.BANANA_TREE_PLANKS = new BlockBase(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD)),
+                MonkeBlocks.BANANA_TREE_LOG = new BlockBase(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0f,2.0f).sound(SoundType.WOOD).harvestTool(ToolType.AXE), new Item.Properties().group(MonkeMod.TAB), "banana_tree_log"),
+                MonkeBlocks.BANANA_TREE_LEAVES = new BlockBase(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f,0.2f).sound(SoundType.PLANT), new Item.Properties().group(MonkeMod.TAB), "banana_tree_leaves"),
+                MonkeBlocks.BANANA_TREE_PLANKS = new BlockBase(Block.Properties.create(Material.WOOD).hardnessAndResistance(2.0f, 3.0f).sound(SoundType.WOOD), new Item.Properties().group(MonkeMod.TAB), "banana_tree_planks"),
         };
 
         event.getRegistry().registerAll(blocks);

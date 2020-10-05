@@ -11,11 +11,11 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.storage.loot.LootContext;
 
 import java.util.List;
+import java.util.Properties;
 
 public class BlockBase extends Block {
     public Item item;
 
-    Blocks
     @Override
     public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
         List<ItemStack> list = super.getDrops(state, builder);
@@ -26,7 +26,7 @@ public class BlockBase extends Block {
         return list;
     }
 
-    public BlockBase(Properties properties) {
+    public BlockBase(Properties properties, Item.Properties builder, String regName) {
         super(properties);
 
         ResourceLocation location = new ResourceLocation("monkemod",regName);
