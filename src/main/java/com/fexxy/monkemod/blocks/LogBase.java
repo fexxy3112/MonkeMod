@@ -15,7 +15,7 @@ public class LogBase extends BlockBase {
     public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
     public LogBase(Properties properties, Item.Properties builder, String regName) {
-        super(properties, builder, regName);
+        super(properties);
         this.setDefaultState(this.getDefaultState().with(AXIS, Direction.Axis.Y));
     }
 
