@@ -3,6 +3,7 @@ package com.fexxy.monkemod.blocks;
 import com.fexxy.monkemod.lists.MonkeBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
